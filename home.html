@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2_Public welfare crowdfunding</title>
+    <style>
+        
+        .title {
+            font-size: 67px;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 35px;
+            background: linear-gradient(90deg, rgba(255, 0, 150, 1), rgba(0, 204, 255, 1));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+
+        .banner {
+            width:100%;
+            display: flex;
+            justify-content: center;
+            margin: 20px auto;
+            background-color: rgb(243, 149, 33);
+        }
+
+        .banner-item {
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #D9E8EC;
+            border: 1px solid rgb(187, 187, 187);
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            background-color: rgb(245, 228, 205);
+            padding: 20px;
+        }
+
+        .gallery {
+            position: relative;
+            overflow: hidden;
+            width: 80%; /* 画廊宽度 */
+            margin: 0 auto; /* 居中 */
+        }
+
+        .images-container {
+            display: flex;
+            transition: transform 0.5s ease; /* 平滑过渡效果 */
+        }
+
+        .img {
+            width: 33.33%;  /* 每张图片宽度 */
+            display: block; /* 显示块 */
+        }         
+
+        .center {
+            text-align: center;
+        }
+
+        .intro {
+            width: 75%;
+            margin: 0 auto; /* 居中 */
+            max-width: 1200px; /* 最大宽度，依据需求调整 */
+        }
+        .text{
+            margin: 25px 0 0 0 ;
+            text-indent: 2rem;
+        }
+        .list-item{
+            margin-top: 20px;
+            background-color: rgb(203, 201, 201);
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .list-item-text{
+            margin: 30px;
+        }
+        .menu{
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translate(0,-50%);
+        }
+        .menu-item{
+            width: 100px;
+            height: 50px;
+            background-color: rgb(120, 138, 138);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid ghostwhite;
+            margin-top: 2px;
+            color: white;
+        }
+        .active-info{
+            display: flex;
+            border: 1px solid gray;
+          margin: 20px 0;
+        }
+        .left{
+            width: 70%;
+            border-right: 1px solid gray;
+            padding: 20px;
+        }
+        .line{
+            flex: 1;
+            border-bottom: 1px solid gray;
+        }
+        .left-item{
+            display: flex;
+            margin: 10px 0;
+        }
+        .right{
+            width: 30%;
+            border-left: 1px solid gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .active-img{
+            width: 100%;
+        }
+        .desc{
+            margin: 20px;
+        }
+        body{
+            height: 100%;
+            background-color: rgb(245, 228, 205);
+                }
+    </style>
+</head>
+
+    
+<body>
+        <div class="container" id="top">
+            <div class="title">LOVE DONATION</div>
+            <div class="banner">
+                <div class="banner-item" onclick="toIndex()">
+                    Home
+                </div>
+                <div class="banner-item"  onclick="toSearch()">
+                    Search
+                </div>
+            </div>
+            <div class="center desc">
+                Welcome to LOVE DONATION Web
+            </div>
+            <div class="gallery"><!--画廊-->
+                <div class="images-container">
+                    <img src="image/imag1.jpg" alt="Image 1" class="img">
+                    <img src="image/imag4.jpg" alt="Image 4" class="img">
+                    <img src="image/imag2.jpg" alt="Image 2" class="img">
+                    <img src="image/imag3.jpg" alt="Image 3" class="img">
+                    <img src="image/imag5.jpg" alt="Image 5" class="img">
+                    <img src="image/imag6.jpg" alt="Image 6" class="img">
+                    <img src="image/imag7.jpg" alt="Image 7" class="img">
+                    <img src="image/imag8.jpg" alt="Image 8" class="img">
+                    <img src="image/imag9.jpg" alt="Image 9" class="img">
+                </div>
+            </div>
+            <script>
+                let currentIndex = 0;
+                const images = document.querySelectorAll('.img');
+                const container = document.querySelector('.images-container');
+
+                function showNextImage() {
+                currentIndex = (currentIndex + 1) % (images.length / 3);
+                const offset = -currentIndex * 100; // 根据当前索引计算偏移
+                container.style.transform = `translateX(${offset}%)`;
+                }
+
+                setInterval(showNextImage, 3000); // 每3秒切换一次
+
+            </script>
+
+            
+            <div class="intro">
+                <div class="center">
+                <div class="text">我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，</div>
+                <div class="text">我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，
+                </div>
+                <div class="text">我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，</div>
+                <div class="text">我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，</div>
+          
+                <div class="list"></div>
+                
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-item" onclick="goTo('#top')">top</div>
+                <div class="menu-item" onclick="goTo('#active1')">active1</div>
+                <div class="menu-item" onclick="goTo('#active2')">active2</div>
+                <div class="menu-item" onclick="goTo('#active3')">active3</div>
+                <div class="menu-item" onclick="goTo('#active4')">active4</div>
+                <div class="menu-item" onclick="goTo('#active5')">active5</div>
+                <div class="menu-item" onclick="goTo('#bottom')">bottom</div>
+            </div>
+        </div>
+        <div id="bottom"></div>
+        <script src="./jquery.js"></script>
+
+
+        <script>
+          
+            //  活动数据
+            let list = [
+                {id:'001',
+                name:'杰克逊',
+                title:'帮助杰克逊家族在洪水发生后的重建工作',
+                aim:'100万',
+                act:'18万',
+                city:'拜伦贝',
+                status:'进行中',
+                type:'危机缓解',
+            },
+            {id:'001',
+                name:'杰克逊',
+                title:'帮助杰克逊家族在洪水发生后的重建工作',
+                aim:'100万',
+                act:'18万',
+                city:'拜伦贝',
+                status:'进行中',
+                type:'危机缓解',
+            },
+            {id:'001',
+                name:'杰克逊',
+                title:'帮助杰克逊家族在洪水发生后的重建工作',
+                aim:'100万',
+                act:'18万',
+                city:'拜伦贝',
+                status:'进行中',
+                type:'危机缓解',
+            },
+            {id:'001',
+                name:'杰克逊',
+                title:'帮助杰克逊家族在洪水发生后的重建工作',
+                aim:'100万',
+                act:'18万',
+                city:'拜伦贝',
+                status:'进行中',
+                type:'危机缓解',
+            },
+            {id:'001',
+                name:'杰克逊',
+                title:'帮助杰克逊家族在洪水发生后的重建工作',
+                aim:'100万',
+                act:'18万',
+                city:'拜伦贝',
+                status:'进行中',
+                type:'危机缓解',
+            },
+            ]
+            //  展示活动列表
+           function showList(){
+            let html = '';
+           
+            for(let i=0;i<list.length;i++){
+                let temp =`<div class="active-info" id='active${i+1}'>
+                    <div class="left">
+                        <div class="left-item"><div>姓名：</div><div class="line">${list[i].name}</div></div>
+                        <div class="left-item"><div>ID：</div><div class="line">${list[i].id}</div></div>
+                        <div class="left-item"><div>组织者：</div><div class="line">${list[i].name}</div></div>
+                        <div class="left-item"><div>内容：</div><div class="line">${list[i].name}</div></div>
+                        <div class="left-item"><div>目标资金：</div><div class="line">${list[i].aim}</div></div>
+                        <div class="left-item"><div>当前资金：</div><div class="line">${list[i].act}</div></div>
+                        <div class="left-item"><div>城市：</div><div class="line">${list[i].city}</div></div>
+                        <div class="left-item"><div>活动：</div><div class="line">${list[i].title}</div></div>
+                        <div class="left-item"><div>类型：</div><div class="line">${list[i].type}</div></div>
+                    </div>
+                    <div class="right">
+                        <img class="active-img"
+                        src="http://gips2.baidu.com/it/u=195724436,3554684702&fm=3028&app=3028&f=JPEG&fmt=auto?w=1280&h=960"
+                        alt="">
+                    </div>
+                </div>`
+                html += temp
+            }
+            $(".list").html(html)
+           }
+         
+           //   滚动到指定为止
+           function goTo(top){
+           let id = top
+            var targetOffset = $(id).offset().top;
+            console.log(targetOffset)
+            $('html, body').animate({scrollTop: targetOffset}, 1000);
+           }
+    
+           //   跳转到首页
+           function toIndex(){
+            window.location.href = 'index.html'
+           }
+           //   跳转到搜索页面
+           function toSearch(){
+            window.location.href = 'search.html'
+           }
+           //   跳转到详情页面
+           function toDetail(){
+            window.location.href = 'detail.html'
+           }
+    
+           showList()
+        </script>
+</body>
+
+    
+    </html>
