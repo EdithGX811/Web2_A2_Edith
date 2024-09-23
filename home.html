@@ -17,7 +17,7 @@
             .dancing-script {
                 font-family: 'Dancing Script', cursive;
                 text-align: center;
-                font-size: 43px;
+                font-size: 47px;
             }
         </style>
             <link href="https://fonts.googleapis.com/css2?family=Baloo&display=swap" rel="stylesheet">
@@ -26,6 +26,27 @@
                     font-family: 'Baloo', cursive;
                 }
             </style>
+
+            <!--<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+            <style>
+                .great-vibes {
+                    font-family: 'Great Vibes', cursive;
+                    text-align: center;
+                    font-size: 47px;
+                }
+            </style>
+            
+                <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+                <style>
+                    .satisfy {
+                        font-family: 'Satisfy', cursive;
+                        text-align: center;
+                        font-size: 43px;
+                    }
+                </style>-->
+            
+            
+        </head>
         
     
     
@@ -98,6 +119,7 @@
         .img {
             width: 33.33%;  /* 每张图片宽度 */
             display: block; /* 显示块 */
+            border-radius: 12px; /* 可选：圆角 */
         }         
 
         .center {
@@ -110,9 +132,44 @@
             max-width: 1200px; /* 最大宽度，依据需求调整 */
         }
         .text{
-            margin: 25px 0 0 0 ;
+            margin: 27px 0 0 0 ;
             text-indent: 2rem;
+            flex: 1; /* 使文本部分占据剩余空间 */
         }
+        .layout{
+            display: flex;
+            align-items: flex-start; /* 垂直对齐 */
+            margin: 27px 0;
+        }
+        .image {
+            margin-left: 20px; /* 图片与文字之间的间距 */
+            margin-top: 30px;
+            border-radius: 20px; /* 可选：圆角 */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* X轴偏移, Y轴偏移, 模糊半径, 阴影颜色 */
+        }
+        .image-container {
+            overflow: visible; /* 允许溢出 */
+            display: inline-block; /* 使容器适应图片大小 */
+        }
+
+        .image-container img {
+            transition: transform 0.3s ease; /* 添加过渡效果 */
+        }
+
+        .image-container:hover img {
+            transform: scale(1.1); /* 悬停时放大 */
+        }
+        .full-width-line {
+            border: none; /* 去掉默认边框 */
+            height: 5px; /* 设置高度 */
+            background-color: #ccc; /* 设置颜色 */
+            width: 75%; /* 使分割线宽度适应屏幕 */
+            margin: 40px 0; /* 设置上下间距 */
+            border-radius: 20px; /* 可选：圆角 */
+            box-shadow: 0.1px 0.2px 0.5px rgba(0, 0, 0, 0.5); /* X轴偏移, Y轴偏移, 模糊半径, 阴影颜色 */
+            
+        }
+
         .list-item{
             margin-top: 20px;
             background-color: rgb(203, 201, 201);
@@ -141,6 +198,11 @@
             border: 1px solid ghostwhite;
             margin-top: 2px;
             color: white;
+            cursor: pointer; /* 鼠标悬停变成手指 */
+        }
+        .menu-item:hover {
+            background-color: #ecedf1; /* 悬停时背景颜色 */
+            color: #595f75; /* 悬停时文字颜色 */
         }
         .active-info{
             display: flex;
@@ -155,10 +217,12 @@
         .line{
             flex: 1;
             border-bottom: 1px solid gray;
+            
         }
         .left-item{
             display: flex;
             margin: 10px 0;
+            
         }
         .right{
             width: 30%;
@@ -172,8 +236,6 @@
         }
         .desc{
             margin: 20px;
-            
-            text-align: center; /* 居中对齐 */
         }
         body{
             height: 100%;
@@ -212,9 +274,9 @@
             padding: 10px; /* 内边距 */
         }
 
-.footer-item {
+        .footer-item {
     color: lightgray; /* 可选：调整字体颜色 */
-}
+        }
 
     </style>
     
@@ -269,16 +331,36 @@
             
             <div class="intro">
                 <div class="center">
-                <div class="text">我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，</div>
-                <div class="text">我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，
+                <div class="layout">
+                    <div class="text baloo "style="font-size: 25px; ">Here, we are committed to quickly and directly supporting individuals and communities affected by disasters and social inequality. We believe that every donation can ignite a spark of hope, spreading love and care in every corner.</div>
+                        <div class="image-container">
+                        <img src="image/imag10.jpg" alt="Image 10" class="image image-container" width="600"> <!-- 这里替换成你的图片链接 -->
+                        </div>
                 </div>
-                <div class="text">我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，</div>
-                <div class="text">我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，</div>
-          
+                <div class="text  baloo" style="font-size: 33px;">Real Story</div>
+                <div class="text" style="font-size: 17px;">In a small town, a mother lost her home due to a natural disaster and found herself in a difficult situation. With the help of our platform, hundreds of kind-hearted individuals gathered their strength and raised funds for her to rebuild her home. Today, she not only rebuilt her own house, but also provided support for her neighbors. Every story proves that the power of unity can change destiny. Let's move forward hand in hand and create more beautiful futures!</div>
+                
+                <div style="width: 100%; display: flex;">
+                    <div style="width: 25%;"></div>
+                    <hr class="full-width-line" style="width: 75%;">
+                </div>
+                <div class="baloo" style="text-align: left; font-size: 60px;">WHY</div>
+                <div class="text"style="text-align: right;"><span style="font-weight: bold;" >Supporting charitable causes: </span>helping those in need or communities.</div>
+                <div class="text"style="text-align: left;"><span style="font-weight: bold;" >Promoting social change: </span>funding projects to address social issues.</div>
+                <div class="text"style="text-align: right;"><span style="font-weight: bold;" >Personal sense of achievement:</span> feel contributed and satisfied through donations.</div>
+                <div class="text"style="text-align: left;"><span style="font-weight: bold;" >Impact others' lives:</span> improve the quality of life and opportunities for others.</div>
+                <div class="text"style="text-align: right;"><span style="font-weight: bold;" >Motivate others:</span> Set an example and encourage more people to participate in public welfare activities.</div>
+                
+                <div style="width: 100%; display: flex;">
+                    <hr class="full-width-line" style="width: 75%;">
+                    <div style="width: 25%;"></div>
+                </div>
+                <div class="baloo" style="text-align: ceter; font-size: 60px;">Active Donation List</div>
                 <div class="list"></div>
                 
                 </div>
             </div>
+
             <div class="menu">
                 <div class="menu-item baloo" onclick="goTo('#top')">top</div>
                 <div class="menu-item baloo" onclick="goTo('#active1')">active1</div>
@@ -302,83 +384,54 @@
         </div>
 
 
+        <div id="bottom"></div>
+        <script src="./jquery.js"></script>
         <script>
-          
-            //  活动数据
-            let list = [
-                {id:'001',
-                name:'杰克逊',
-                title:'帮助杰克逊家族在洪水发生后的重建工作',
-                aim:'100万',
-                act:'18万',
-                city:'拜伦贝',
-                status:'进行中',
-                type:'危机缓解',
-            },
-            {id:'001',
-                name:'杰克逊',
-                title:'帮助杰克逊家族在洪水发生后的重建工作',
-                aim:'100万',
-                act:'18万',
-                city:'拜伦贝',
-                status:'进行中',
-                type:'危机缓解',
-            },
-            {id:'001',
-                name:'杰克逊',
-                title:'帮助杰克逊家族在洪水发生后的重建工作',
-                aim:'100万',
-                act:'18万',
-                city:'拜伦贝',
-                status:'进行中',
-                type:'危机缓解',
-            },
-            {id:'001',
-                name:'杰克逊',
-                title:'帮助杰克逊家族在洪水发生后的重建工作',
-                aim:'100万',
-                act:'18万',
-                city:'拜伦贝',
-                status:'进行中',
-                type:'危机缓解',
-            },
-            {id:'001',
-                name:'杰克逊',
-                title:'帮助杰克逊家族在洪水发生后的重建工作',
-                aim:'100万',
-                act:'18万',
-                city:'拜伦贝',
-                status:'进行中',
-                type:'危机缓解',
-            },
-            ]
+              //  活动数据
+              let list = []
+            //  获取所有活动
+            function getAllList(){
+                $.get('http://localhost:3000/api/all', function(data, status) {
+                     console.log(data);
+                     list = data;
+                     showList()
+                });
+    
+            }
+           
+            getAllList()
             //  展示活动列表
            function showList(){
             let html = '';
-           
-            for(let i=0;i<list.length;i++){
+            
+
+            for(let i=0;i<list.length;i++){ 
+               
+
                 let temp =`<div class="active-info" id='active${i+1}'>
                     <div class="left">
-                        <div class="left-item"><div>姓名：</div><div class="line">${list[i].name}</div></div>
-                        <div class="left-item"><div>ID：</div><div class="line">${list[i].id}</div></div>
-                        <div class="left-item"><div>组织者：</div><div class="line">${list[i].name}</div></div>
-                        <div class="left-item"><div>内容：</div><div class="line">${list[i].name}</div></div>
-                        <div class="left-item"><div>目标资金：</div><div class="line">${list[i].aim}</div></div>
-                        <div class="left-item"><div>当前资金：</div><div class="line">${list[i].act}</div></div>
-                        <div class="left-item"><div>城市：</div><div class="line">${list[i].city}</div></div>
-                        <div class="left-item"><div>活动：</div><div class="line">${list[i].title}</div></div>
-                        <div class="left-item"><div>类型：</div><div class="line">${list[i].type}</div></div>
+                        <div class="left-item"><div>ID：</div><div class="line">${list[i].CATEGORY_ID}</div></div>
+                        <div class="left-item"><div>ORGANIZER：</div><div class="line">${list[i].ORGANIZER}</div></div>
+                        <div class="left-item"><div>TITTLE：</div><div class="line">${list[i].TITLE}</div></div>
+                        
+                        <div class="left-item"><div>TARGET FUNDINGS：</div><div class="line">${list[i].TARGET_FUNDING}</div></div>
+                        <div class="left-item"><div>CURRENT FUNDINGS：</div><div class="line">${list[i].CURRENT_FUNDING}</div></div>
+                        <div class="left-item"><div>CITY：</div><div class="line">${list[i].CITY}</div></div>
+                        <div class="left-item"><div>TYPE：</div><div class="line">${list[i].NAME}</div></div>
                     </div>
-                    <div class="right">
-                        <img class="active-img"
-                        src="http://gips2.baidu.com/it/u=195724436,3554684702&fm=3028&app=3028&f=JPEG&fmt=auto?w=1280&h=960"
-                        alt="">
-                    </div>
-                </div>`
-                html += temp
+                  <div class="right">
+                    <img class="active-img"
+                    src="./image/1${i+1}.jpg"
+                    alt="">
+                </div>
+                
+            </div>`
+            html += temp
             }
-            $(".list").html(html)
+            $(".list").html(html)                    
+           
            }
+         
          
            //   滚动到指定为止
            function goTo(top){
