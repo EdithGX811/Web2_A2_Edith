@@ -313,7 +313,7 @@
             for (let i = 0; i < list.length; i++) {
                 html = `
                         <div class="detail">
-                            <div>Activity ID: <span class="show">${list[i].CATEGORY_ID}</span></div>
+                            <div>Activity ID: <span class="show">${list[i].FUNDRAISER_ID}</span></div>
                             <div>Activity Organizer: <span class="show">${list[i].ORGANIZER}</span></div>
                             <div>Activity Tittle: <span class="show">${list[i].TITLE}</span></div>
                             <div>Activity Target Fundings: <span class="show">${list[i].TARGET_FUNDING}</span></div>
@@ -323,7 +323,7 @@
                             <div>Most Enthusiastic Individual: <span class="show">${list[i].MOST_ENTHUSIASTIC_INDIVIDUAL}</span></div>
                             <div>Activity Type: <span class="show">${list[i].NAME}</span></div>
                             <div>Activity Start Time: <span class="show">${list[i].EVENT}</span></div>
-                         </div>`;
+                         </div>`
             }
 
             $(".show-area").html(html)
