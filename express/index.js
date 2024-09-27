@@ -11,8 +11,8 @@ app.use(cors());
 app.get('/api/all', (req, res) => {
   // 这里可以执行数据库查询
   const sql =
-    `SELECT f.*,c.* FROM fundraisers f
-LEFT JOIN   categories c
+    `SELECT f.*,c.* FROM FUNDRAISER f
+LEFT JOIN   CATEGORY c
 ON f.CATEGORY_ID = c.CATEGORY_ID
   `
   db.query(sql, (err, results) => {
@@ -24,8 +24,8 @@ ON f.CATEGORY_ID = c.CATEGORY_ID
 app.get('/api/search', (req, res) => {
   // 这里可以执行数据库查询
   let sql =
-    `SELECT f.*,c.* FROM fundraisers f
-LEFT JOIN   categories c
+    `SELECT f.*,c.* FROM FUNDRAISER f
+LEFT JOIN   CATEGORY c
 ON f.CATEGORY_ID = c.CATEGORY_ID WHERE 1 = 1 
 `;
 console.log('---req.query',req.query)
@@ -49,8 +49,8 @@ console.log('--sql---',sql)
 app.get('/api/id', (req, res) => {
   // 这里可以执行数据库查询
   const sql =
-    `SELECT f.*,c.* FROM fundraisers f
-LEFT JOIN   categories c
+    `SELECT f.*,c.* FROM FUNDRAISER f
+LEFT JOIN   CATEGORY c
 ON f.CATEGORY_ID = c.CATEGORY_ID WHERE FUNDRAISER_ID = ${req.query.FUNDRAISER_ID} ;
 `
 

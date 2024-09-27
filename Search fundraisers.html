@@ -104,6 +104,11 @@
             padding: 0;
         }
 
+        .desc {
+            margin: 20px;
+            font-weight: bold;
+            font-size: 30px;
+        }
 
         .img {
             width: 30%;
@@ -116,14 +121,11 @@
 
         .intro {
             width: 100%;
-            margin: 20px 0;
         }
 
         .text {
             margin: 20px 0 0 0;
             text-indent: 2rem;
-            font-size: 18px;
-            color: #595f75;
         }
 
         .list-item {
@@ -156,22 +158,67 @@
             color: white;
         }
 
-        .img {
+        .flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .select {
+            width: 200px;
+        }
+
+        .search {
+            width: 30px;
+        }
+
+        .active-info {
+            display: flex;
+            border: 1px solid gray;
+            margin: 20px 0;
+        }
+
+        .left {
+            width: 70%;
+            border-right: 1px solid gray;
+            padding: 20px;
+        }
+
+        .line {
+            flex: 1;
+            border-bottom: 1px solid gray;
+        }
+
+        .left-item {
+            display: flex;
+            margin: 10px 0;
+        }
+
+        .right {
             width: 30%;
-            margin: 0 auto;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .footer-tips {
+            border-left: 1px solid gray;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100px;
         }
 
+        .active-img {
+            width: 100%;
+        }
+
+        .desc {
+            margin: 20px;
+        }
+
+        body {
+            height: 100%;
+            background-color: #ecedf1;
+        }
+       
+        .red{
+            font-weight: bold;
+            color: red;
+        }
         .tips{
             display: flex;
             justify-content: center;
@@ -204,80 +251,59 @@
             padding: 10px; /* 内边距 */
         }
 
-        .footer-item {
+        /**.footer-item{
             text-decoration: underline;
             margin-right: 20px;
-
-        }
-
-        .button-area {
-            display: flex; /* 使用 Flexbox */
-            justify-content: center; /* 水平居中对齐 */
-            gap: 1200px; /* 按钮之间的间距 */
-        }
-
-
-        .button {
-            width: 100px;
-            height: 50px;
-            font-size: 20px; 
-            display: inline-block; /* 让按钮在同一行显示 */
-            background-color: #676e88;
-            color: white;
-            cursor: pointer; /* 鼠标悬停变成手指 */ 
-            text-align: center;
-            /**margin: 0 10px; 添加左右边距 */
-            font-family: 'Baloo', sans-serif;
-        }
-        .button:hover {
-            background-color: #ecedf1; /* 悬停时背景颜色 */
-            color: #595f75; /* 悬停时文字颜色 */
-        }
-
-        .show {
-            font-weight: bold;
-            font-size: 20px;
-            color: #595f75;
-        }
-        .detail{
-            text-align: center;
+            
+        }**/
+        .footer-item {
+    color: lightgray; /* 可选：调整字体颜色 */
         }
     </style>
 </head>
 
 <body>
     <div class="container" id="top">
-            <div class="title-container">
-                <div class="title baloo">LOVE DONATION</div>
+        <div class="title-container">
+            <div class="title baloo">LOVE DONATION</div>
+        </div>
+        <div class="banner">
+            <div class="banner-item " onclick="toIndex()">
+                Home
             </div>
-            <div class="dancing-script">
-                Welcome to LOVE DONATION Web
+            <div class="banner-item "  onclick="toSearch()">
+                Search
             </div>
-        <div class="title "style="font-size:32px;text-align: center;">Activity Details</div>
-
-        <div class="show-area">
-
-
         </div>
-        <div class="center">
-            <img class="img image"
-                src="http://gips2.baidu.com/it/u=195724436,3554684702&fm=3028&app=3028&f=JPEG&fmt=auto?w=1280&h=960"
-                alt="">
-          
 
+        <div class="dancing-script">
+            Welcome to LOVE DONATION Web
         </div>
-        <div class="intro">
-            <div class="text">
-                我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，我是活动介绍，
+        <div class="center desc baloo">
+            You Can Search
+        </div>
+        <div class="flex">
+            <div class="form-item">
+                City Name： <input class="CITY" type="text" name="" id="">
             </div>
-
+            <div class="form-item">
+                Organizer： <input class="ORGANIZER" type="text" name="" id="">
+            </div>
+            <div class="form-item">
+                Activity Type ：
+                <select class="CATEGORY_ID">
+                    <option value="">Please select</option>
+                    <option value="1">Education</option>
+                    <option value="2">Health</option>
+                    <option value="3">Environment</option>
+                </select>
+            </div>
+            <div><button><img class="search" onclick="search()"style="cursor: pointer;" src="./image/search.png" alt=""></button></div>
+            <div><button onclick="clearChechboxes()"style="cursor: pointer;">clean</button></div>
         </div>
-        
-        <div class="button-area ">
-            <button class="button" style="cursor: pointer;" onclick="juanzeng()">DONATE</button>
-            <button class="button" style="cursor: pointer;" onclick="back()">RETURN</button>
+        <div class="list">
+            <div class="tips">You haven't searched yet!</div>
         </div>
-        
         <div class="footer"></div>
             <div class="footer-tips baloo"> YOU CAN CONCAT US BY</div>
             <div class="concat baloo">
@@ -287,61 +313,9 @@
             </div>
         </div>
     </div>
-
-
     <div id="bottom"></div>
     <script src="./jquery.js"></script>
-    <script>
-        let id = localStorage.getItem('id')
-        console.log(id)
-        //  活动数据
-        let list = []
-        //  获取所有活动
-        function getList(params) {
-            $.get('http://localhost:3000/api/id', params, function (data, status) {
-                console.log(data);
-                list = data;
-                showList()
-                $(".active-detail").html(data[0].DESCRIPTION)
-                $(".image").attr('src',data[0].IMAGES)
-            });
-
-        }
-        getList({ FUNDRAISER_ID: id })
-        function showList() {
-            let html = '';
-            for (let i = 0; i < list.length; i++) {
-                html = `
-                        <div class="detail">
-                            <div>Activity ID: <span class="show">${list[i].FUNDRAISER_ID}</span></div>
-                            <div>Activity Organizer: <span class="show">${list[i].ORGANIZER}</span></div>
-                            <div>Activity Tittle: <span class="show">${list[i].TITLE}</span></div>
-                            <div>Activity Target Fundings: <span class="show">${list[i].TARGET_FUNDING}</span></div>
-                            <div>Activity Current Fundings: <span class="show">${list[i].CURRENT_FUNDING}</span></div>
-                            <div>Activity City: <span class="show">${list[i].CITY}</span></div>
-                            <div>The Number of Donations: <span class="show">${list[i].THE_NUMBER_OF_DONATIONS}</span></div>
-                            <div>Most Enthusiastic Individual: <span class="show">${list[i].MOST_ENTHUSIASTIC_INDIVIDUAL}</span></div>
-                            <div>Activity Type: <span class="show">${list[i].NAME}</span></div>
-                            <div>Activity Start Time: <span class="show">${list[i].EVENT}</span></div>
-                         </div>`
-            }
-
-            $(".show-area").html(html)
-        }
-
-        // 捐赠
-        function juanzeng() {
-            alert('The function is under development')
-        }
-        // 捐赠
-        function back() {
-            location.href = 'search.html'
-        }
-
-
-
-
-    </script>
+    <script src="./js/searb.js"></script>
 </body>
 
 </html>

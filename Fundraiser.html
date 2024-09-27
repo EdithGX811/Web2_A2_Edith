@@ -104,11 +104,6 @@
             padding: 0;
         }
 
-        .desc {
-            margin: 20px;
-            font-weight: bold;
-            font-size: 30px;
-        }
 
         .img {
             width: 30%;
@@ -121,11 +116,14 @@
 
         .intro {
             width: 100%;
+            margin: 20px 0;
         }
 
         .text {
             margin: 20px 0 0 0;
             text-indent: 2rem;
+            font-size: 18px;
+            color: #595f75;
         }
 
         .list-item {
@@ -158,67 +156,22 @@
             color: white;
         }
 
-        .flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .select {
-            width: 200px;
-        }
-
-        .search {
-            width: 30px;
-        }
-
-        .active-info {
-            display: flex;
-            border: 1px solid gray;
-            margin: 20px 0;
-        }
-
-        .left {
-            width: 70%;
-            border-right: 1px solid gray;
-            padding: 20px;
-        }
-
-        .line {
-            flex: 1;
-            border-bottom: 1px solid gray;
-        }
-
-        .left-item {
-            display: flex;
-            margin: 10px 0;
-        }
-
-        .right {
+        .img {
             width: 30%;
-            border-left: 1px solid gray;
+            margin: 0 auto;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .footer-tips {
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100px;
         }
 
-        .active-img {
-            width: 100%;
-        }
-
-        .desc {
-            margin: 20px;
-        }
-
-        body {
-            height: 100%;
-            background-color: #ecedf1;
-        }
-       
-        .red{
-            font-weight: bold;
-            color: red;
-        }
         .tips{
             display: flex;
             justify-content: center;
@@ -251,59 +204,80 @@
             padding: 10px; /* 内边距 */
         }
 
-        /**.footer-item{
+        .footer-item {
             text-decoration: underline;
             margin-right: 20px;
-            
-        }**/
-        .footer-item {
-    color: lightgray; /* 可选：调整字体颜色 */
+
+        }
+
+        .button-area {
+            display: flex; /* 使用 Flexbox */
+            justify-content: center; /* 水平居中对齐 */
+            gap: 1200px; /* 按钮之间的间距 */
+        }
+
+
+        .button {
+            width: 100px;
+            height: 50px;
+            font-size: 20px; 
+            display: inline-block; /* 让按钮在同一行显示 */
+            background-color: #676e88;
+            color: white;
+            cursor: pointer; /* 鼠标悬停变成手指 */ 
+            text-align: center;
+            /**margin: 0 10px; 添加左右边距 */
+            font-family: 'Baloo', sans-serif;
+        }
+        .button:hover {
+            background-color: #ecedf1; /* 悬停时背景颜色 */
+            color: #595f75; /* 悬停时文字颜色 */
+        }
+
+        .show {
+            font-weight: bold;
+            font-size: 20px;
+            color: #595f75;
+        }
+        .detail{
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
     <div class="container" id="top">
-        <div class="title-container">
-            <div class="title baloo">LOVE DONATION</div>
-        </div>
-        <div class="banner">
-            <div class="banner-item " onclick="toIndex()">
-                Home
+            <div class="title-container">
+                <div class="title baloo">LOVE DONATION</div>
             </div>
-            <div class="banner-item "  onclick="toSearch()">
-                Search
+            <div class="dancing-script">
+                Welcome to LOVE DONATION Web
             </div>
-        </div>
+        <div class="title "style="font-size:32px;text-align: center;">Activity Details</div>
 
-        <div class="dancing-script">
-            Welcome to LOVE DONATION Web
+        <div class="show-area">
+
+
         </div>
-        <div class="center desc baloo">
-            You Can Search
+        <div class="center">
+            <img class="img image"
+                src="http://gips2.baidu.com/it/u=195724436,3554684702&fm=3028&app=3028&f=JPEG&fmt=auto?w=1280&h=960"
+                alt="">
+          
+
         </div>
-        <div class="flex">
-            <div class="form-item">
-                City Name： <input class="CITY" type="text" name="" id="">
+        <div class="intro">
+                <div class="show baloo"style="font-size:33px;text-align: center;">Description</div> 
+            <div class="text active-detail">  
             </div>
-            <div class="form-item">
-                Organizer： <input class="ORGANIZER" type="text" name="" id="">
-            </div>
-            <div class="form-item">
-                Activity Type ：
-                <select class="CATEGORY_ID">
-                    <option value="">Please select</option>
-                    <option value="1">Education</option>
-                    <option value="2">Health</option>
-                    <option value="3">Environment</option>
-                </select>
-            </div>
-            <div><button><img class="search" onclick="search()"style="cursor: pointer;" src="./image/search.png" alt=""></button></div>
-            <div><button onclick="clearChechboxes()"style="cursor: pointer;">clean</button></div>
+
         </div>
-        <div class="list">
-            <div class="tips">You haven't searched yet!</div>
+        
+        <div class="button-area ">
+            <button class="button" style="cursor: pointer;" onclick="juanzeng()">DONATE</button>
+            <button class="button" style="cursor: pointer;" onclick="back()">RETURN</button>
         </div>
+        
         <div class="footer"></div>
             <div class="footer-tips baloo"> YOU CAN CONCAT US BY</div>
             <div class="concat baloo">
@@ -313,88 +287,11 @@
             </div>
         </div>
     </div>
+
+
     <div id="bottom"></div>
     <script src="./jquery.js"></script>
-    <script>
-                //  活动数据
-                let list = []
-        //  获取所有活动
-        function getList(params){
-            $.get('http://localhost:3000/api/search',params, function(data, status) {
-                 console.log(data);
-                 list = data;
-                 showList()
-            });
-
-        }
-       
-        //   跳转到详情页面
-        function toDetail(id) {
-           localStorage.setItem('id',id)
-        }
-        //  搜索按钮
-        function search() {
-            var CITY = $(".CITY").val();
-            var ORGANIZER = $(".ORGANIZER").val();
-            var CATEGORY_ID = $(".CATEGORY_ID").val();
-            if (!ORGANIZER && !CITY && !CATEGORY_ID) {
-                return    alert('Enter at least one condition')
-            }
-            let params = {
-                ORGANIZER:ORGANIZER,
-                CITY:CITY,
-                CATEGORY_ID:CATEGORY_ID
-            }
-            getList(params)
-
-        }
-        //  清楚下拉框数据
-        function clearChechboxes() {
-            $(".CATEGORY_ID").val('')
-            $(".CITY").val('')
-            $(".ORGANIZER").val('')
-        }     
-               //  展示活动列表
-               function showList(){
-        let html = '';
-                if(list.length == 0){
-                 return   $(".list").html(` <div class="tips red">No relevant information found</div>`)
-                }
-        for(let i=0;i<list.length;i++){
-            let temp =`<div class="active-info" id='active${i+1}'>
-                <div class="left">
-                    <div class="left-item"><div>ID：</div><div class="line">${list[i].FUNDRAISER_ID}</div></div>
-                    <div class="left-item"><div>ORGANIZER：</div><a  onclick='toDetail(${list[i].FUNDRAISER_ID})'  href='./detail.html' class="line">${list[i].ORGANIZER}</a></div>
-                    <div class="left-item"><div>TITTLE：</div><div class="line">${list[i].TITLE}</div></div>
-                    
-                    <div class="left-item"><div>TARGET FUNDINGS：</div><div class="line">${list[i].TARGET_FUNDING}</div></div>
-                    <div class="left-item"><div>CURRENT FUNDINGS：</div><div class="line">${list[i].CURRENT_FUNDING}</div></div>
-                    <div class="left-item"><div>CITY：</div><div class="line">${list[i].CITY}</div></div>
-                    <div class="left-item"><div>TYPE：</div><div class="line">${list[i].NAME}</div></div>
-                </div>
-                <div class="right">
-                    <img class="active-img"
-                    src="./image/1${i+1}.jpg"
-                    alt="">
-                </div>
-            </div>`
-            html += temp
-        }
-        $(".list").html(html)
-       }
-     
-        //   跳转到首页
-        function toIndex() {
-            window.location.href = 'home.html'
-        }
-        //   跳转到搜索页面
-        function toSearch() {
-            window.location.href = 'search.html'
-        }
-
-
-
-    </script>
+    <script src="./fundc.js"></script>
 </body>
 
 </html>
