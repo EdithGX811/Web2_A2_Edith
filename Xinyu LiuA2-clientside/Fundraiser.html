@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2 Love Donate</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        .lobster {
+            font-family: 'Lobster', cursive;
+        }
+    </style>
+    
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+        <style>
+            .dancing-script {
+                font-family: 'Dancing Script', cursive;
+                text-align: center;
+                font-size: 47px;
+            }
+        </style>
+            <link href="https://fonts.googleapis.com/css2?family=Baloo&display=swap" rel="stylesheet">
+            <style>
+                .baloo {
+                    font-family: 'Baloo', cursive;
+                }
+            </style>
+
+            <!--<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+            <style>
+                .great-vibes {
+                    font-family: 'Great Vibes', cursive;
+                    text-align: center;
+                    font-size: 47px;
+                }
+            </style>
+            
+                <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+                <style>
+                    .satisfy {
+                        font-family: 'Satisfy', cursive;
+                        text-align: center;
+                        font-size: 43px;
+                    }
+                </style>-->
+            
+            
+        </head>
+        
+    
+    
+    <style>
+        
+        .title-container {
+            background-color: #595f75; /* 设置框的背景颜色 */
+            padding: 20px; /* 添加内边距，增加高度 */
+            border-radius: 0; /* 可选：圆角 */
+            text-align: center; /* 让标题居中 */
+            margin: 0; /* 移除外边距 */
+            min-height: 150px; /* 设置最小高度 */
+        }
+
+        .title {
+            font-size: 75px;
+            font-weight: bold;
+            margin-bottom: 0 auto; /* 移除下边距以避免重叠 */
+            background: linear-gradient(90deg, #98a7dc, rgb(255, 255, 255));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 1.2em;
+        }
+
+        
+
+        .banner {
+            width:100%;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            /**background-color: rgb(30, 31, 105);*/
+        }
+
+        .banner-item {
+            font-size: 24px; /* 调整字体大小 */
+            cursor: pointer; /* 鼠标悬停变成手指 */
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            color: rgb(232, 238, 244);
+            background-color: #595f75;
+            transition: background-color 0.3s, color 0.3s; /* 添加过渡效果 */
+            /**border: 1px solid rgb(187, 187, 187);*/
+            
+        }
+        .banner-item:hover {
+            background-color: #ecedf1; /* 悬停时背景颜色 */
+            color: #595f75; /* 悬停时文字颜色 */
+        }
+        .container {
+            width: 100%;
+            margin: 0 ;
+            background-color: #ecedf1;
+            padding: 0;
+        }
+
+
+        .img {
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .intro {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .text {
+            margin: 20px 0 0 0;
+            text-indent: 2rem;
+            font-size: 18px;
+            color: #595f75;
+        }
+
+        .list-item {
+            margin-top: 20px;
+            background-color: rgb(203, 201, 201);
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .list-item-text {
+            margin: 30px;
+        }
+
+        .menu {
+            position: fixed;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .menu-item {
+            width: 100px;
+            height: 50px;
+            background-color: rgb(120, 138, 138);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid ghostwhite;
+            margin-top: 2px;
+            color: white;
+        }
+
+        .img {
+            width: 30%;
+            margin: 0 auto;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .footer-tips {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .tips{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        /**.footer {
+            border: 1px solid gray;
+            padding-bottom: 20px;
+            width: 100%;
+        }*/
+
+        .footer-tips {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 56px;
+            height: 100px;
+            background-color: black; /* 背景色 */
+            color: white; /* 字体颜色 */
+        }
+
+        .concat {
+            display: flex;
+            flex-direction: column; /* 改为列方向 */
+            font-size: 20px;
+            align-items: center; /* 居中对齐 */
+            background-color: black; /* 背景色 */
+            color: white; /* 字体颜色 */
+            padding: 10px; /* 内边距 */
+        }
+
+        .footer-item {
+            text-decoration: underline;
+            margin-right: 20px;
+
+        }
+
+        .button-area {
+            display: flex; /* 使用 Flexbox */
+            justify-content: center; /* 水平居中对齐 */
+            gap: 1200px; /* 按钮之间的间距 */
+        }
+
+
+        .button {
+            width: 100px;
+            height: 50px;
+            font-size: 20px; 
+            display: inline-block; /* 让按钮在同一行显示 */
+            background-color: #676e88;
+            color: white;
+            cursor: pointer; /* 鼠标悬停变成手指 */ 
+            text-align: center;
+            /**margin: 0 10px; 添加左右边距 */
+            font-family: 'Baloo', sans-serif;
+        }
+        .button:hover {
+            background-color: #ecedf1; /* 悬停时背景颜色 */
+            color: #595f75; /* 悬停时文字颜色 */
+        }
+
+        .show {
+            font-weight: bold;
+            font-size: 20px;
+            color: #595f75;
+        }
+        .detail{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="top">
+            <div class="title-container">
+                <div class="title baloo">LOVE DONATION</div>
+            </div>
+            <div class="dancing-script">
+                Welcome to LOVE DONATION Web
+            </div>
+        <div class="title "style="font-size:32px;text-align: center;">Activity Details</div>
+
+        <div class="show-area">
+
+
+        </div>
+        <div class="center">
+            <img class="img image"
+                src="http://gips2.baidu.com/it/u=195724436,3554684702&fm=3028&app=3028&f=JPEG&fmt=auto?w=1280&h=960"
+                alt="">
+          
+
+        </div>
+        <div class="intro">
+                <div class="show baloo"style="font-size:33px;text-align: center;">Description</div> 
+            <div class="text active-detail">  
+            </div>
+
+        </div>
+        
+        <div class="button-area ">
+            <button class="button" style="cursor: pointer;" onclick="juanzeng()">DONATE</button>
+            <button class="button" style="cursor: pointer;" onclick="back()">RETURN</button>
+        </div>
+        
+        <div class="footer"></div>
+            <div class="footer-tips baloo"> YOU CAN CONCAT US BY</div>
+            <div class="concat baloo">
+                <div>QQ:   <span class="footer-item">2774587455</span></div>
+                <div>   Email:<span class="footer-item">2774587455@qq.com</span></div>
+                <div>   Phone:<span class="footer-item">+86 15066522226</span></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="bottom"></div>
+    <script src="./js/fundc.js"></script>
+</body>
+
+</html>
